@@ -1,0 +1,27 @@
+/* 아래에 CSS를 작성해주세요. */
+.image {
+  width: 300px;
+  margin: 1px;
+}
+
+.subtitle {
+  color: rgb(112, 112, 104, 1);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.blue {
+  color: rgb(74, 174, 253, 1);
+  font-weight: bold;
+}
+
+.subtitle_2 {
+  font-size: 25px;
+}
+
+.review {
+  color: grey;
+}

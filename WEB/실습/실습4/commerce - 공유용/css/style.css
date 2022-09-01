@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+  height: 10000px
+}
+
+.top {
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 0.5rem;
+  background-color: none;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link:visited {
+  color: black;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.nav-item {
+  margin: 2px 5px;
+}
+
+.banner {
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  max-height: initial;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-about-img {
+  width: 500px;
+  border-radius: 1rem;
+}
+
+.container-about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2rem;
+  align-items: center;
+  line-height: 20px;
+  color: rgb(92 87 87);
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+}
+
+.more-img {
+  width: 64px;
+  height: 64px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.more-items {
+  text-align: center;
+  font-size: 13px;
+}
+
+.btn {
+  position: relative;
+  
+}
+
+.top-btn {
+  position: absolute;
+  right: 250px; 
+  width: 2rem;
+  height: 2rem;
+}
+
+.product {
+  display: flex;
+  width: 1280px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.product-items {
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.card-img {
+  padding: 1rem;
+}
+
+.product-text {
+  font-weight: bold;
+}

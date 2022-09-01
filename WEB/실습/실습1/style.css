@@ -1,0 +1,29 @@
+/* 아래에 CSS를 작성해주세요. */
+.image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtext {
+  display: block;
+  font-size: 12px;
+}
+
+.item-list {
+  width: 900px
+}
+
+.item {
+  width: 300px;
+  display: inline-block;
+  margin: 3px;
+}
+
+.subtitle {
+  color: rgb(150, 150, 150, 1);
+  font-weight: bold;
+}
