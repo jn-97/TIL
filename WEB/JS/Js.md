@@ -111,3 +111,11 @@ try {
   logMyErrors(e); // 오류 처리기에 예외 객체 전달
 }
 ```
+
+4. 함수
+
+```
+function square(number) {
+  return number * number;
+}
+```
