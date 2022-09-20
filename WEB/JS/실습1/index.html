@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modal-overlay {
+      /* position 전체 화면 기준 */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* 배경색, 너비, 높이 */
+      background-color: orange;
+      width: 100%;
+      height: 100vh;
+      /* 내부 내용 */
+      color: white;
+      font-size: xx-large;
+      align-items: center;
+      justify-content: center;
+      /* 기본은 안보이게 설정 */
+      display: none;
+    }
+    .active {
+      display: flex;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+  <input type="text" id="text-input">
+  <p id="txt"></p>
+  <button id="modal-btn">Submit</button>
+  <div id="modal-text" class="modal-overlay">
+    HELLO
+  </div>
+
+  <script>
+    const textInput = document.querySelector('#text-input')
+    textInput.addEventListener('input', function(e) {
+      const p = document.querySelector('#txt')
+      p.innerText = e.target.value
+      const modalText = document.querySelector('#modal-text')
+      modalText.innerText = e.target.value
+    })
+
+    const modalBtn = document.querySelector('#modal-btn')
+    modalBtn.addEventListener('click', function(e) {
+      document.querySelector('#modal-text').classList.toggle('active')
+    })
+
+    const modalText = document.querySelector('#modal-text')
+    modalText.addEventListener('click', function() {
+      document.querySelector('#modal-text').classList.toggle('active')
+    })
+
+  </script>
+</body>
+</html>

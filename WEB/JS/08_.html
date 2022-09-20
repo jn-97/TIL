@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="text-input">
+  <p id="txt"></p>
+  <script>
+    // 1. input 선택
+    const textInput = document.querySelector('#text-input')
+    // 2. 
+    textInput.addEventListener('input', function(e) {
+      // input의 value를 받아오기
+      console.log(e)
+      console.log(e.target.value)
+      // input의 value 그대로 출력하기
+      const p = document.querySelector('#txt')
+      p.innerText = e.target.value
+    })
+  </script>
+</body>
+</html>
