@@ -59,3 +59,9 @@ def lotto(request):
     }
 
     return render(request, 'lotto.html', context)
+
+def fake(request):
+    return render(request, 'fake.html')
+
+def fake_naver(request):
+    return render(request, 'fake_naver.html')

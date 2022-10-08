@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('today_dinner/', views.today_dinner),
     path('lotto/', views.lotto),
+    path('fake/', views.fake),
+    path('fake_naver/', views.fake_naver),
 ]
