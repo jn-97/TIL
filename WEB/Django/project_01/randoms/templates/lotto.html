@@ -5,13 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lotto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <style>
+    .num {
+      width: 5rem;
+      height: 5rem;
+      text-align: center;
+      line-height: 5rem;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+
+  </style>
 </head>
 <body>
   
-  <hr>
-  {% for n in num %}
-    <span>{{ n }}</span>
-  {% endfor %}
+  <div>
+    <hr>
+    {% for r in result %}
+    <div class="d-flex justify-content-center">
+      <div class="d-flex">
+        {% for i in r.0 %}
+        <div class="num">{{ i }}</div>
+        {% endfor %}
+
+        <div class="px-3 pt-4">
+          {% if r.1 == 5 %}
+          <div class="fs-4 text-danger">꽝</div>
+          {% else %}
+          <div class="fs-4">{{ r.1 }}등</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}  
+  </div>
   
 </body>
 </html>

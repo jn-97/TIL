@@ -29,10 +29,33 @@ def today_dinner(request):
 
 def lotto(request):
 
-    num = random.sample(range(1, 46), 6)
-    
+    win_num = [3, 11, 15, 29, 35, 44]
+    bonus = 10
+    list_ = []
+
+    for _ in range(5):
+        lotto = random.sample(range(1, 46), 6)
+        cnt = 0
+
+        for l in lotto:
+            if l in win_num:
+                cnt += 1
+
+        if cnt == 6:
+            result = 1
+        elif cnt == 5:
+            result = 2
+        elif 2 <= cnt <= 4:
+            result = 3
+        elif cnt == 1:
+            result = 4
+        else:
+            result = 5
+
+        list_.append([sorted(lotto), result])
+
     context = {
-        'num': num,
+        'result': list_
     }
 
     return render(request, 'lotto.html', context)
