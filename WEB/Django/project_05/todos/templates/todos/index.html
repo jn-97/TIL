@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'todos:create' %}">
+  <!-- todo -->
+  <label class="form-label mt-2">할 일</label>
+  <input class="form-control mb-3" type="text" name="content" maxlength="80">
+
+  <!-- priority -->
+  <label class="form-label">우선 순위</label>
+  <select class="form-control mb-3" name="priority">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+
+  <!-- deadline -->
+  <label class="form-label">마감 기한</label>
+  <input class="form-control mb-3" type="date" name="deadline">
+
+  <!-- submit -->
+  <input class="form-control" type="submit" value="할 일 추가"> 
+</form>
+
+<hr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">우선 순위</th>
+      <th scope="col">할 일 내용</th>
+      <th scope="col">생성 날짜</th>
+      <th scope="col">마감 기한</th>
+      <th scope="col">진행 상태</th>
+      <th scope="col">상태 변경</th>
+      <th scope="col">삭제</th>    
+    </tr>
+  </thead>
+  <tbody>
+    {% for todo in todos %}
+    <tr>
+      <td>{{ todo.priority }}</td>
+      <td>{{ todo.content }}</td>
+      <td>{{ todo.created_at }}</td>
+      <td>{{ todo.deadline }}</td>
+      <td>{{ todo.completed }}</td>
+      <td><button class="btn btn-primary">변경</button></td>
+      <td><button class="btn btn-primary"><a href="{% url 'todos:delete' todo.pk %}" style="color:white">삭제</a></button></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
