@@ -10,12 +10,13 @@
   <h2>글목록</h2>
   {% for content in guestbook %}
     <p>{{ content.content }}</p>
+    <!-- content안에서 content라는 id를 가진 요소 출력 -->
   {% endfor %}
 </div>
 
 <div>
   <h2>글 작성</h2>
-  <form action="/articles/create/" method="GET">
+  <form action="{% url 'articles:create' %}" method="GET">
     <input type="text" name="content">
     <input type="submit">
   </form>
