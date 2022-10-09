@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="mt-3 mx-4">
+  <form action="/lipsum2/" method="GET">
+    <div class="mb-3">
+      <label class="form-label">문단의 수</label>
+      <input type="text" class="form-control" name="num1">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">문단별 단어의 수</label>
+      <input type="text" class="form-control" name="num2">
+    </div>
+    <button type="submit" class="btn btn-primary">생성</button>
+  </form>
+</div>
+{% endblock content %}

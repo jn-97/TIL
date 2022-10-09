@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+{% for lorem in lorem_list %}
+  <div>
+  {% for l in lorem %}
+    {{ l }}
+  {% endfor %}
+  <hr>
+  </div>
+{% endfor %}
+</div>
+
+{% endblock content %}
