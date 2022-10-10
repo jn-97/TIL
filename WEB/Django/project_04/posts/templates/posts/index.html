@@ -6,11 +6,14 @@
 
 <ul>
   {% for post in posts %}
-    <li>ID: {{ post.id }} | 제목: {{ post.title }} | 내용: {{ post.content }}
-      <a href="">
+    <li>ID: {{ post.id }} |
+      <a href="{% url 'posts:detail' post.pk %}">
+        제목: {{ post.title }}
+      </a>
+      <a href="{% url 'posts:edit' post.pk %}">
         [수정]
       </a>
-      <a href="/posts/delete/{{ post.id }}">
+      <a href="{% url 'posts:delete' post.pk %}">
         [삭제]
       </a>
     </li>

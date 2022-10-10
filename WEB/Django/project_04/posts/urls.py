@@ -15,4 +15,7 @@ urlpatterns = [
     path('new/', views.new, name='new'), # 글을 작성하는 페이지
     path('create/', views.create, name='create'), # 글 작성 완료하는 페이지
     path('delete/<int:pk>', views.delete, name='delete'), # 글 삭제하는 페이지
+    path('detail/<int:pk_>', views.detail, name="detail"), # 글 상세페이지
+    path('edit/<int:pk_>', views.edit, name="edit"), # 글 수정하는 페이지
+    path('update/<int:pk_>', views.update, name="update"), # 수정한 글 update하는 페이지
 ]

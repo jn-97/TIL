@@ -39,3 +39,38 @@ def delete(request, pk):
     Post.objects.get(id=pk).delete()
 
     return redirect('posts:index')
+
+def detail(request, pk_):
+
+    # get() 메소드를 사용해서 특정 pk의 데이터를 불러온다.
+    post = Post.objects.get(pk=pk_)
+    
+    context= {
+        'post': post,
+    }
+
+    return render(request, 'posts/detail.html', context)
+
+def edit(request, pk_):
+    post = Post.objects.get(pk=pk_)
+
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'posts/edit.html', context)
+
+def update(request, pk_):
+    post = Post.objects.get(pk=pk_)
+
+    title_ = request.GET.get('title')
+    content_ = request.GET.get('content')
+
+    # 데이터를 수정
+    post.title = title_
+    post.content = content_
+
+    # 데이터를 수정한 것을 반영(save)
+    post.save()
+
+    return redirect('posts:detail', post.pk)
