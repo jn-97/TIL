@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'movies:update' review.pk %}">
+  <div class="mb-3">
+    <label class="form-label fw-bold">제목</label>
+    <input type="text" class="form-control" maxlength=80 name="title" value="{{ review.title }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label fw-bold">내용</label>
+    <textarea class="form-control" rows="3" name="content">{{ review.content }}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary form-control">리뷰 수정</button>
+</form>
+
+{% endblock %}
