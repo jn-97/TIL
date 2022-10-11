@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="d-flex justify-content-between">
+  <h1>{{ movie.title }}</h1>
+  <p class="fw-bold">{{ movie.running_time }}분</p>
+</div>
+
+<div>
+  <p>{{ movie.summary }}</p>
+</div>
+
+<div class="d-flex justify-content-end">
+  <div class="">
+    <a class="btn btn-outline-success" href="">수정</a>
+    <a class="btn btn-outline-danger" href="{% url 'movies:delete' movie.pk %}">삭제</a>
+  </div>
+</div>
+
+{% endblock body %}
