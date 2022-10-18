@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block body %}
+
+{% for article in articles %}
+  <p>{{ article.pk }} | {{ article.title }} | {{ article.content }}</p>
+  <a href="{% url 'articles:detail' article.pk %}">상세보기</a>
+{% endfor %}
+
+{% endblock body %}
