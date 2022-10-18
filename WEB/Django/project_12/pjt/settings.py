@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-((4x&-9phj+hp(8x##b$d#imt42ep%2ktuk_3b6fl7-x_y3jb8"
+SECRET_KEY = "django-insecure-x8ic&1z)7msup3p9$_#y*(6(w+i9k3c+2v764kt7icm5pe32x8"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,23 +31,21 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "accounts",
-    "main",
+    "articles",
     "django_bootstrap5",
-    "django_extensions",
-    "django.contrib.admin",  # 관리자
-    "django.contrib.auth",  # 유저/인증
+    "django.contrib.admin",
+    "django.contrib.auth",
     "django.contrib.contenttypes",
-    "django.contrib.sessions",  # 세션 관리
+    "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",  # 세션
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",  # CSRF
+    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -130,5 +128,3 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-AUTH_USER_MODEL = "accounts.User"
