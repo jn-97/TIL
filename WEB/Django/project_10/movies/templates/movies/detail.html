@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
+{% load django_bootstrap5 %}
 
 {% block body %}
 
 <div class="d-flex justify-content-between">
   <h1>{{ movie.title }}</h1>
   <p class="fw-bold">{{ movie.running_time }}분</p>
+</div>
+
+<div>
+  <img src="{{ movie.image.url }}" alt="{{ movie.image }}" width="400" height="300">
 </div>
 
 <div>

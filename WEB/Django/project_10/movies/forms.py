@@ -9,4 +9,5 @@ class MovieForm(forms.ModelForm):
             "title",
             "summary",
             "running_time",
+            "image",
         ]

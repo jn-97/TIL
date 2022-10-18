@@ -15,7 +15,7 @@ def index(request):
 def create(request):
 
     if request.method == "POST":
-        movie_form = MovieForm(request.POST)
+        movie_form = MovieForm(request.POST, request.FILES)
         if movie_form.is_valid():
             movie_form.save()
             return redirect("movies:index")
