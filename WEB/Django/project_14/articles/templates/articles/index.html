@@ -5,6 +5,7 @@
 
 {% for article in articles %}
   <p>{{ article.pk }} | {{ article.title }} | {{ article.content }}</p>
+  <p>{{ article.user.username }}</p>
   <a href="{% url 'articles:detail' article.pk %}">상세보기</a>
 {% endfor %}
 

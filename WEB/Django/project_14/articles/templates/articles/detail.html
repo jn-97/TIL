@@ -3,7 +3,9 @@
 
 {% block body %}
 
-<h1>{{ article.pk }}번 게시글</h1>
+<h1>{{ article.title }}</h1>
+<p>{{ article.pk }}번 게시글</p>
+<h3><a href="{% url 'accounts:detail' article.user.pk %}">{{ article.user.username }}</a></h3>
 <p>{{ article.content }}</p>
 
 <h4 class="my-3">댓글</h4>
