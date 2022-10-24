@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block body %}
+
+{% if request.resolver_match.url_name == 'create' %}
+<h1>글 쓰기</h1>
+{% else %}
+<h1>글 수정하기</h1>
+{% endif %}
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% bootstrap_button button_type="submit" content="확인" %}
+</form>
+
+{% endblock body %}

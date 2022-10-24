@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block body %}
+
+<a href="{% url 'articles:create' %}">글 쓰기</a>
+{% for article in articles %}
+<p><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a> | {{ article.content }}</p>
+{% endfor %}
+
+{% endblock body %}
