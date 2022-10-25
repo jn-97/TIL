@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+
+<h1 class="d-flex justify-content-center">회원 가입</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit">확인</button>
+  </div>
+</form>
+
+{% endblock body %}

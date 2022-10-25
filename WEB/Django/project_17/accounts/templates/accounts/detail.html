@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1 class="mb-4 d-flex justify-content-center">프로필</h1>
+
+<div class="mb-3 d-flex justify-content-center">
+  {% if user.image %}
+  <img src="{{ user.image.url }}" width="200" height="180" class="rounded-circle">
+  {% else %}
+  <img width="200" height="180" class="rounded-circle" src="https://mblogthumb-phinf.pstatic.net/MjAyMDExMDFfMTA1/MDAxNjA0MjI4ODc1Mzk0.05ODadJdsa3Std55y7vd2Vm8kxU1qScjh5-3eVJ9T-4g.h7lHansSdReVq7IggiFAc44t2W_ZPTPoZWihfRMB_TYg.JPEG.gambasg/%EC%9C%A0%ED%8A%9C%EB%B8%8C_%EA%B8%B0%EB%B3%B8%ED%94%84%EB%A1%9C%ED%95%84_%ED%8C%8C%EB%9E%91.jpg?type=w800">
+  {% endif %}
+</div>
+<form class="form-floating">
+  <p class="form-control">{{ user.full_name }}</p>
+  <label for="floatingInputValue">이름</label>
+</form>
+<form class="form-floating">
+  <p class="form-control">{{ user.email }}</p>
+  <label for="floatingInputValue">이메일</label>
+</form>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <a href="{% url 'accounts:update' %}" class="btn btn-outline-success" type="button">수정하기</a>
+  <a href="{% url 'articles:index' %}" class="btn btn-outline-primary" type="button">홈으로</a>
+  <a href="{% url 'accounts:logout' %}" class="btn btn-outline-danger" type="button">로그아웃</a>
+</div>
+
+{% endblock body %}
