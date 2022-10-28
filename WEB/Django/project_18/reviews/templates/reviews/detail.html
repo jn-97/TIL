@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="my-2 d-flex justify-content-center">
+  <h1>{{ review.title }}</h1>
+</div>
+
+<div class="clearfix">
+  <img src="{{ review.image_thumbnail.url }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+  <p>{{ review.content }}</p>
+</div>
+
+<div class="d-flex justify-content-end">
+  장르 {{ review.genre }}
+</div>
+
+{% endblock body %}

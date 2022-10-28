@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body %}
 
-<div class="row row-cols-lg-4 mb-3">
+<img src="{% static 'images/movie.png' %}" class="img-fluid mb-3" alt="...">
+
+<div class="d-flex justify-content-center">
+    <h1>Movies</h1>
+</div>
+
+<div class="row row-cols-lg-5 mb-3">
     {% for review in reviews.all %}
     <div class="col mt-3">
         <div class="card shadow">
