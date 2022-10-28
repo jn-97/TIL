@@ -3,7 +3,12 @@
 
 {% block body %}
 
-<h1>리뷰 작성</h1>
+{% if request.resolver_match.url_name == 'create' %}
+<h1 class="d-flex justify-content-center">리뷰 작성</h1>
+{% else %}
+<h1 class="d-flex justify-content-center">수정하기</h1>
+{% endif %}
+
 <form action="" method="POST" enctype="multipart/form-data">
   {% csrf_token %}
   {% bootstrap_form form %}

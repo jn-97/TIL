@@ -19,8 +19,13 @@
             <img class="card-top-img" src="https://dummyimage.com/295x295/000/fff" alt="">
             {% endif %}
             <div class="card-body p-2">
-                <a class="card-title" style="text-decoration:none; color:black"><h5>{{ review.title }}</h5></a>
-                <a style="text-decoration:none; color:black">작성자:{{ review.user.username }}</a>
+                <a class="card-title" style="text-decoration:none; color:black" href="{% url 'reviews:detail' review.pk %}"><h5>{{ review.title }}</h5></a>
+                <a style="text-decoration:none; color:grey" href="">작성자: {{ review.user.username }}</a>
+                {% if request.user == review.user %}
+                <br>
+                <a href="{% url 'reviews:update' review.pk %}">수정</a>
+                <a href="{% url 'reviews:delete' review.pk %}">삭제</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -37,3 +37,7 @@ class Review(models.Model):
         format="JPEG",
         options={"quality": 80},
     )
+    like_users = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name="like_reviews"
+    )
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
