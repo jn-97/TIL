@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="row row-cols-lg-4 mb-3">
+    {% for review in reviews.all %}
+    <div class="col mt-3">
+        <div class="card shadow">
+            {% if review.image_thumbnail %}
+            <img class="card-top-img" src="{{ review.image_thumbnail.url }}" alt="없음">
+            {% else %}
+            <img class="card-top-img" src="https://dummyimage.com/295x295/000/fff" alt="">
+            {% endif %}
+            <div class="card-body p-2">
+                <a class="card-title" style="text-decoration:none; color:black"><h5>{{ review.title }}</h5></a>
+                <a style="text-decoration:none; color:black">작성자:{{ review.user.username }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}        
+</div>
+
+{% endblock body %}
