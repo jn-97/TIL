@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock css %}
+
+{% block body %}
+
+<div class="section_1">
+  <p>01</p>
+  <h1>Titanium</h1>
+  <div class="section_1_1 d-flex justify-content-center">
+    <img src="{% static 'images/card.png' %}" style="widht:350px; height:260px;">
+  </div>
+  <div>
+    <p>Buy-in</p>
+    <h3  class='animated bounceInDown'>150 000 XKI</h3>
+    <p>A Black account for an exclusive experience</p>
+  </div>
+  <a href="" class="btn customBtn" style="color:white;">-> Discover perks</a>
+</div>
+
+<div class="section_2 d-flex justify-content-center text-align-center">
+  <div class="row" style="text-align: center; flex-direction: column;">
+    <p>01</p>
+    <h1>Titanium</h1>
+    <div class="section_2_1">
+      <img src="{% static 'images/card.png' %}" style="widht:330px; height:230px;">
+    </div>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% endblock body %}
