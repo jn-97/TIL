@@ -1,7 +1,5 @@
 # 두 수의 합
-
 import sys
-
 sys.stdin = open("3273.txt")
 
 N = int(sys.stdin.readline())  # 수열의 크기

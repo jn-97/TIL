@@ -1,5 +1,4 @@
 # 통계학
-
 import sys
 from collections import Counter
 

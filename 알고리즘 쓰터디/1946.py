@@ -1,31 +1,9 @@
 # 신입 사원
-
 import sys
 
 sys.stdin = open("1946.txt")
 
 T = int(sys.stdin.readline())
-
-# 시간 초과 (이중반복문)
-# for tc in range(T):
-#     N = int(sys.stdin.readline())
-
-#     list_ = []
-#     for n in range(N):
-#         st_1, st_2 = map(int, sys.stdin.readline().split())
-#         list_.append((st_1, st_2))
-
-#     list_.sort()
-
-#     cnt = 0
-#     v = list_[0][1]
-#     for i in range(len(list_)):
-#         for j in range(1, len(list_)):
-#             if list_[j][1] < v:
-#                 cnt += 1
-#                 v = list_[j][1]
-
-#     print(cnt + 1)
 
 for tc in range(T):
     N = int(sys.stdin.readline())

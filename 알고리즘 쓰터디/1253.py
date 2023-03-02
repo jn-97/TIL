@@ -1,5 +1,4 @@
 # 좋다
-
 import sys
 
 sys.stdin = open("1253.txt")
