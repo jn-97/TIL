@@ -1,3 +1,4 @@
+# 절댓값 힙
 import sys
 import heapq
 sys.stdin = open("11286.txt")
