@@ -12,4 +12,4 @@ for i in combinations(doby, 7):
         for result in sorted(i):
             print(result)
 
-        break
+        break # break를 걸어줘야 경우의 수가 여러개 나오지 않고 한 개만 출력했을 때 멈춘다.
