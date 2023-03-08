@@ -9,5 +9,7 @@ doby = [int(input()) for _ in range(9)]
 
 for i in combinations(doby, 7):
     if sum(i) == 100:
-        for _ in sorted(i):
-            print(_)
+        result = sorted(i)
+
+for _ in result:
+    print(_)
