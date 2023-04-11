@@ -9,7 +9,6 @@ adj = [[0] * N for _ in range(N)]
 for _ in range(M):
     a, b = map(lambda x: x-1, map(int, input().split()))
     adj[a][b] = adj[b][a] = 1
-    
 
 ans = 0
 chk = [False] * N # 방문체크 ex. 여러번 방문하면 안되니까 한 번 방문한 노드는 제외
