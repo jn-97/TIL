@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 sys.stdin = open("11724.txt")
+
 input = sys.stdin.readline
 
 N, M = map(int, input().split()) # 정점 N, 간선 M
