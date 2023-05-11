@@ -1,4 +1,5 @@
 import sys
+
 sys.stdin = open('14692.txt')
 
 T = int(input())
