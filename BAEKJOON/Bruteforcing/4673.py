@@ -1,4 +1,5 @@
 # 셀프 넘버
+
 import sys
 input = sys.stdin.readline
 
