@@ -1,5 +1,4 @@
 # 유기농 배추
-
 import sys
 sys.stdin = open('1012.txt')
 
