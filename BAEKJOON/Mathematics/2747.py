@@ -1,4 +1,5 @@
 # 피보나치 수
+
 import sys
 sys.stdin = open('2747.txt')
 
