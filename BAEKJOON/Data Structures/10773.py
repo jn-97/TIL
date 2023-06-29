@@ -1,5 +1,4 @@
 # 제로
-
 import sys
 from collections import deque
 sys.stdin = open("10773.txt")
